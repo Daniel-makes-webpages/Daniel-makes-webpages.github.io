@@ -63,8 +63,10 @@
                     everything.innerHTML = "<div id='div'></div> <div id='sound'></div>";
                     var div = document.getElementById("div");
                     var sound = document.getElementById("sound");
+                    var windowWidth = window.innerWidth;
+                    var windowHeight = window.innerHeight;
                     sound.innerHTML = "<audio controls autoplay unmuted> <source src='aaughmp3.mp3' type='audio/mpeg'> </audio>";
-                    div.innerHTML = "<image src='https://goldfishseafoodmarket.com/cdn/shop/products/Untitleddesign_5.png?v=1673944066' width = '1400' height = '850'></image>";
+                    div.innerHTML = "<image src='https://goldfishseafoodmarket.com/cdn/shop/products/Untitleddesign_5.png?v=1673944066' width = ${windowWidth} height = ${windowHeight}></image>";
                 }
             };
             button.addEventListener("click", buttonFunction);
