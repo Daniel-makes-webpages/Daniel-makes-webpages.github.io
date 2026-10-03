@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: rgb(0, 0, 0);
+                color: rgb(0, 255, 0);
+                font-family: monospace;
+            }
+            #button{
+                background-color: rgb(0, 255, 0);
+                color: rgb(0, 0, 0);
+                width: 200px;
+                height: 50px;
+                font-size: 30px;
+                border-radius: 10px;
+                font-family: "Arial rounded MT bold";
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "everything">
+        <h1>Press the button!</h1>
+        <br>
+        <div id="div"></div>
+        <br>
+        <h1 id="button-counter"></h1>
+        <br>
+        <div id="spacing"></div>
+        <button id="button">Press me!</button>
+        <br>
+        <div id="sound"></div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> </div>
+        <script>
+            var press_count = 0;
+            var everything = document.getElementById("everything");
+            var spacing = document.getElementById("spacing");
+            var button = document.getElementById("button");
+            var button_counter = document.getElementById("button-counter");
+            button_counter.textContent = "button presses: " + press_count;
+            var buttonFunction = function(){
+                press_count++;
+                button_counter.textContent = "button presses: " + press_count;
+                if(press_count === 1){
+                    spacing.innerHTML = "<br><br><br><br><br><br><br><br><br>";
+                }
+                if(press_count === 2){
+                    spacing.innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+                }
+                if(press_count === 3){
+                    spacing.innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+                }
+                if(press_count === 4){
+                    spacing.innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+                }
+                if(press_count === 5){
+                    spacing.innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+                }
+                if(press_count === 6){
+                    spacing.innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+                }
+                if(press_count === 7){
+                    everything.innerHTML = "<div id='div'></div> <div id='sound'></div>";
+                    var div = document.getElementById("div");
+                    var sound = document.getElementById("sound");
+                    sound.innerHTML = "<audio controls autoplay unmuted> <source src='aaughmp3.mp3' type='audio/mpeg'> </audio>";
+                    div.innerHTML = "<image src='https://goldfishseafoodmarket.com/cdn/shop/products/Untitleddesign_5.png?v=1673944066' width = '1400' height = '850'></image>";
+                }
+            };
+            button.addEventListener("click", buttonFunction);
+        </script>
+    </body>
+</html>
